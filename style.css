@@ -1,0 +1,353 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: mansalva;
+  src: url("./fonts/Mansalva-Regular.ttf");
+}
+@font-face {
+  font-family: roboto;
+  src: url("./fonts/RobotoSlab-Bold.ttf");
+}
+main {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100vh;
+}
+hr {
+  width: 50%;
+  margin: 10px 0 10px 0;
+}
+
+.col1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to left, black, rgb(94, 23, 23));
+}
+.col1 p {
+  color: turquoise;
+  font-size: 70px;
+  font-weight: bold;
+  font-family: mansalva;
+  cursor: pointer;
+}
+.col1 img {
+  height: auto;
+  width: 25%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.draw:hover {
+  animation: pic 0.5s ease-in-out infinite alternate;
+}
+@keyframes pic {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+.col2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col2 p {
+  font-size: 80px;
+  color: turquoise;
+  font-family: mansalva;
+  cursor: pointer;
+  text-align: right;
+  transition: transform 0.3s ease-out;
+}
+
+.skillsBtn:hover {
+  transform: translateX(-30%);
+  color: #bbfff8;
+}
+.skillsBtnActive {
+  transform: translateX(-30%);
+  color: #bbfff8;
+}
+.projectsBtn:hover {
+  transform: translateX(-30%);
+  color: #bbfff8;
+}
+.projectsBtnActive {
+  transform: translateX(-30%);
+  color: #bbfff8;
+}
+.graphicsBtn:hover {
+  transform: translateX(-30%);
+  color: #bbfff8;
+}
+.graphicsBtnActive {
+  transform: translateX(-30%);
+  color: #bbfff8;
+}
+
+.myName:hover {
+  transform: rotate(30);
+  color: #bbfff8;
+  font-size: 75px;
+}
+.myNameBg {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transition: ease-out 1s;
+}
+.myNameActive {
+  visibility: visible;
+  opacity: 1;
+  width: 65%;
+}
+
+.myNameText {
+  background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 0, 100));
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.myNameDesc {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+}
+.contact {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 50px 0 20px 0;
+  position: absolute;
+  bottom: 8%;
+}
+
+.contact img {
+  width: 15%;
+  margin: 10px;
+}
+.emailBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+}
+.phoneBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+}
+.githubBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+  cursor: pointer;
+}
+.linkedinBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+  cursor: pointer;
+}
+
+.emailBox:hover img {
+  width: 30%;
+}
+.emailBox:hover p {
+  font-size: 25px;
+}
+.phoneBox:hover img {
+  width: 30%;
+}
+.phoneBox:hover p {
+  font-size: 25px;
+}
+.githubBox:hover img {
+  width: 30%;
+}
+.githubBox:hover p {
+  font-size: 25px;
+}
+.linkedinBox:hover img {
+  width: 30%;
+}
+.linkedinBox:hover p {
+  font-size: 25px;
+}
+.myNameText p {
+  font-size: 17px;
+  font-family: roboto;
+  color: wheat;
+}
+
+.myNameText h1 {
+  font-size: 25px;
+  font-family: roboto;
+  color: wheat;
+}
+
+.graphicBg {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(112, 141, 5));
+  transition: ease-out 1s;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.graphicBgActive {
+  visibility: visible;
+  opacity: 1;
+  width: 65%;
+}
+.graphicContent {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 5px;
+  row-gap: 5px;
+}
+.graphicContent img {
+  height: auto;
+  width: 100%;
+  border-style: solid;
+}
+.projectBg {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(197, 165, 20));
+  transition: ease-out 1s;
+  overflow: scroll;
+}
+.projectContent {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+.projectContent img {
+  height: auto;
+  width: 80%;
+  border: groove orange 5px;
+  margin: 10px 0 0 10px;
+}
+.projDesc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.projDesc p,
+a {
+  color: whitesmoke;
+  font-family: mansalva;
+  font-size: 40px;
+  font-weight: normal;
+  text-decoration: none;
+}
+.projDesc p,
+a:hover {
+  font-size: 45px;
+  font-weight: bold;
+}
+.projectBgActive {
+  visibility: visible;
+  opacity: 1;
+  width: 65%;
+}
+
+.skillBg {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transition: ease-out 1s;
+}
+.skillContent img {
+  height: auto;
+  width: 80%;
+}
+.skillContent img:hover {
+  height: auto;
+  width: 100%;
+}
+.skillBgActive {
+  visibility: visible;
+  opacity: 1;
+  width: 65%;
+}
+.skillContent {
+  background-image: linear-gradient(to left, rgb(141, 141, 141), whitesmoke);
+  position: relative;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 33% 33% 33%;
+}
+.menuBar {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.exitName {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+}
